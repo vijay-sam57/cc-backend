@@ -15,7 +15,7 @@ const loadMainWindow = () => {
 app.on("ready", loadMainWindow);
 
 app.on("activate", () => {
-  if (BrowserWindow.getAllWindows().length == 0) {
+  if (BrowserWindow.getAllWindows().length <= 4) {
     loadMainWindow();
   }
 });

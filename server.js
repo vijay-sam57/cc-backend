@@ -15,8 +15,8 @@ const io = socket(server, {
 });
 
 io.on("connection", (socket) => {
-  socket.on("send-server", (msg) => {
-    socket.broadcast.emit("send-client", msg);
+  socket.on("message", (msg) => {
+    socket.broadcast.emit("message", msg);
   });
 });
 
